@@ -2,7 +2,7 @@
 ## Artificial Intelligence Roadmap
 
 ### Vision
-  The goal of the Research Intelligence Assistant is to evolve from a research paper search engine into an intelligent research companion capable of understanding scientific literature, assisting researchers throughout the research process, generating new ideas, and providing personalized guidance. The AI should not function as a simple chatbot; instead, it should operate as a specialized Research Intelligence Engine capable of analyzing, reasoning, comparing, and interacting with scientific knowledge.
+  The goal of the Research Intelligence Assistant is to evolve from a research paper search engine into an intelligent research companion capable of understanding scientific literature, assisting researchers throughout the research process, generating new ideas, and providing personalised guidance. The AI should not function as a simple chatbot; instead, it should operate as a specialized Research Intelligence Engine capable of analyzing, reasoning, comparing, and interacting with scientific knowledge.
 # Intelligence Layer 1 — Paper Understanding Engine
    Every research paper must first be understood before any intelligent processing takes place.
    The AI should automatically identify the following:
