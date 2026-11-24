@@ -1,8 +1,8 @@
 import streamlit as st
-from core.models import Paper
-from database.repository import Repository
-from rag.retriever import RAGRetriever
-from ui.components import render_header
+from models import Paper
+from repository import Repository
+from retriever import RAGRetriever
+from components import render_header
 
 def render_chat():
     render_header(
