@@ -157,9 +157,7 @@ class PubMedClient:
                         abstract_parts.append(f"{label}: {section_text}")
                     else:
                         abstract_parts.append(section_text)
-            abstract = ""
-
-".join(abstract_parts) if abstract_parts else None
+            abstract = "".join(abstract_parts) if abstract_parts else None
 
             doi = None
             for id_elem in article.findall(".//PubmedData/ArticleIdList/ArticleId"):
