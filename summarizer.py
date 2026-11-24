@@ -1,7 +1,7 @@
-from ai.provider import AIProvider
-from ai.schema_validator import SchemaValidator
-from config.prompts import SUMMARIZE_PROMPT
-from core.models import Paper
+from provider import AIProvider
+from schema_validator import SchemaValidator
+from prompts import SUMMARIZE_PROMPT
+from models import Paper
 
 class Summarizer:
     @staticmethod
