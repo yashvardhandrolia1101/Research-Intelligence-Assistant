@@ -1,6 +1,6 @@
 import streamlit as st
 from db import init_db
-from components import inject_custom_css(), render_sidebar_status()
+from components import inject_custom_css, render_sidebar_status
 from dashboard_view import render_dashboard
 from discover_view import render_discover
 from workspace_view import render_workspace
