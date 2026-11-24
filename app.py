@@ -1,14 +1,14 @@
 import streamlit as st
 from db import init_db
-from ui.components import inject_custom_css, render_sidebar_status
-from ui.dashboard_view import render_dashboard
-from ui.discover_view import render_discover
-from ui.workspace_view import render_workspace
-from ui.compare_view import render_compare
-from ui.intelligence_view import render_intelligence
-from ui.chat_view import render_chat
-from ui.library_view import render_library
-from ui.settings_view import render_settings
+from components import inject_custom_css, render_sidebar_status
+from dashboard_view import render_dashboard
+from discover_view import render_discover
+from workspace_view import render_workspace
+from compare_view import render_compare
+from intelligence_view import render_intelligence
+from chat_view import render_chat
+from library_view import render_library
+from settings_view import render_settings
 
 st.set_page_config(
     page_title="RIA — Research Intelligence Assistant",
