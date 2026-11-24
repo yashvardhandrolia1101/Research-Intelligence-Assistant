@@ -1,6 +1,6 @@
 import re
 from typing import List, Dict, Any
-from core.models import Paper
+from models import Paper
 
 class DocumentChunker:
     @staticmethod
