@@ -1,7 +1,7 @@
-from ai.provider import AIProvider
-from ai.schema_validator import SchemaValidator
-from config.prompts import EXTRACT_STRUCTURED_PROMPT
-from core.models import Paper, StructuredAnalysis
+from provider import AIProvider
+from schema_validator import SchemaValidator
+from prompts import EXTRACT_STRUCTURED_PROMPT
+from models import Paper, StructuredAnalysis
 
 class Extractor:
     @staticmethod
