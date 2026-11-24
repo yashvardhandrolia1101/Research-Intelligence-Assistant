@@ -1,8 +1,8 @@
 import streamlit as st
-from database.repository import Repository
-from recommendations.engine import RecommendationEngine
-from analytics.visualizer import ResearchVisualizer
-from ui.components import render_header
+from repository import Repository
+from engine import RecommendationEngine
+from visualizer import ResearchVisualizer
+from components import render_header
 
 def render_dashboard(navigate_callback):
     render_header(
