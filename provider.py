@@ -1,7 +1,7 @@
 import json
 import requests
 from typing import Optional, Dict, Any, Tuple
-from config.settings import (
+from settings import (
     DEFAULT_AI_PROVIDER, OLLAMA_BASE_URL, OLLAMA_MODEL,
     OPENAI_API_KEY, OPENAI_MODEL
 )
