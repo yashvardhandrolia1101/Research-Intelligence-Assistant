@@ -1,6 +1,6 @@
 from typing import List, Optional, Dict, Any
-from sources.pubmed import PubMedClient
-from core.models import Paper
+from pubmed import PubMedClient
+from models import Paper
 
 class SearchEngine:
     _cache: Dict[str, Dict[str, Any]] = {}
