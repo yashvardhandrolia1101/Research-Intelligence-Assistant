@@ -1,7 +1,7 @@
 import streamlit as st
-from ai.provider import AIProvider
-from config.settings import DB_PATH
-from ui.components import render_header
+from provider import AIProvider
+from settings import DB_PATH
+from components import render_header
 
 def render_settings():
     render_header(
