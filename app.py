@@ -1,5 +1,5 @@
 import streamlit as st
-from database.db import init_db
+from db.db import init_db
 from ui.components import inject_custom_css, render_sidebar_status
 from ui.dashboard_view import render_dashboard
 from ui.discover_view import render_discover
