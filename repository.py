@@ -1,8 +1,8 @@
 import json
 from typing import List, Optional, Dict, Any
-from database.db import get_db_connection
-from config.settings import DB_PATH
-from core.models import Paper
+from db import get_db_connection
+from settings import DB_PATH
+from models import Paper
 
 class Repository:
     @staticmethod
