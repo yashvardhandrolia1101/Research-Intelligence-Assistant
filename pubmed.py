@@ -157,7 +157,7 @@ class PubMedClient:
                         abstract_parts.append(f"{label}: {section_text}")
                     else:
                         abstract_parts.append(section_text)
-            abstract = "
+            abstract = ""
 
 ".join(abstract_parts) if abstract_parts else None
 
