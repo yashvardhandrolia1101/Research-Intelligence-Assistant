@@ -1,7 +1,7 @@
 import streamlit as st
-from discovery.search_engine import SearchEngine
-from database.repository import Repository
-from ui.components import render_header
+from search_engine import SearchEngine
+from repository import Repository
+from components import render_header
 
 def render_discover(navigate_callback):
     render_header(
