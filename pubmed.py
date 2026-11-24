@@ -2,9 +2,9 @@ import time
 import requests
 import xml.etree.ElementTree as ET
 from typing import List, Optional, Tuple
-from core.models import Paper
-from core.exceptions import SourceError
-from config.settings import PUBMED_BASE_URL, PUBMED_TOOL, PUBMED_EMAIL
+from models import Paper
+from exceptions import SourceError
+from settings import PUBMED_BASE_URL, PUBMED_TOOL, PUBMED_EMAIL
 
 class PubMedClient:
     _last_request_time = 0.0
