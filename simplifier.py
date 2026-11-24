@@ -1,5 +1,5 @@
-from ai.provider import AIProvider
-from config.prompts import SIMPLIFY_PROMPT
+from provider import AIProvider
+from prompts import SIMPLIFY_PROMPT
 
 class Simplifier:
     @staticmethod
