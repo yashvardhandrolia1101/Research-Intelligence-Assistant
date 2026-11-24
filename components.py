@@ -1,5 +1,5 @@
 import streamlit as st
-from ai.provider import AIProvider
+from provider import AIProvider
 
 def inject_custom_css():
     st.markdown("""
