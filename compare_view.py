@@ -1,10 +1,10 @@
 import pandas as pd
 import streamlit as st
-from core.models import Paper
-from database.repository import Repository
-from intelligence.comparator import Comparator
-from exports.markdown_exporter import MarkdownExporter
-from ui.components import render_header
+from models import Paper
+from repository import Repository
+from comparator import Comparator
+from markdown_exporter import MarkdownExporter
+from components import render_header
 
 def render_compare():
     render_header(
