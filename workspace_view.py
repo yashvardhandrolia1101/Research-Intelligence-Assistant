@@ -1,12 +1,12 @@
 import streamlit as st
-from core.models import Paper
-from database.repository import Repository
-from intelligence.summarizer import Summarizer
-from intelligence.extractor import Extractor
-from intelligence.simplifier import Simplifier
-from exports.markdown_exporter import MarkdownExporter
-from exports.pdf_exporter import PDFExporter
-from ui.components import render_header
+from models import Paper
+from repository import Repository
+from summarizer import Summarizer
+from extractor import Extractor
+from simplifier import Simplifier
+from markdown_exporter import MarkdownExporter
+from pdf_exporter import PDFExporter
+from components import render_header
 
 def render_workspace():
     render_header(
