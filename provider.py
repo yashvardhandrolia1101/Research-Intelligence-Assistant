@@ -5,7 +5,7 @@ from settings import (
     DEFAULT_AI_PROVIDER, OLLAMA_BASE_URL, OLLAMA_MODEL,
     OPENAI_API_KEY, OPENAI_MODEL
 )
-from core.exceptions import AIProviderError
+from exceptions import AIProviderError
 
 class AIProvider:
     _runtime_config: Dict[str, Any] = {
