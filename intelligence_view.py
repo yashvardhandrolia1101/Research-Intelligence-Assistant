@@ -1,10 +1,10 @@
 import streamlit as st
-from core.models import Paper
-from database.repository import Repository
-from intelligence.gap_analyzer import GapAnalyzer
-from intelligence.question_generator import QuestionGenerator
-from exports.markdown_exporter import MarkdownExporter
-from ui.components import render_header
+from models import Paper
+from repository import Repository
+from gap_analyzer import GapAnalyzer
+from question_generator import QuestionGenerator
+from markdown_exporter import MarkdownExporter
+from components import render_header
 
 def render_intelligence():
     render_header(
