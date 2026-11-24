@@ -1,11 +1,21 @@
 import json
 import requests
 from typing import Optional, Dict, Any, Tuple
-from settings import (
-    DEFAULT_AI_PROVIDER, OLLAMA_BASE_URL, OLLAMA_MODEL,
-    OPENAI_API_KEY, OPENAI_MODEL
-)
+
+try:
+    from settings import (
+        DEFAULT_AI_PROVIDER, OLLAMA_BASE_URL, OLLAMA_MODEL,
+        OPENAI_API_KEY, OPENAI_MODEL, OPENAI_BASE_URL
+    )
+except ImportError:
+    from settings import (
+        DEFAULT_AI_PROVIDER, OLLAMA_BASE_URL, OLLAMA_MODEL,
+        OPENAI_API_KEY, OPENAI_MODEL
+    )
+    OPENAI_BASE_URL = "https://api.groq.com/openai/v1"
+
 from exceptions import AIProviderError
+
 
 class AIProvider:
     _runtime_config: Dict[str, Any] = {
@@ -13,6 +23,7 @@ class AIProvider:
         "ollama_url": OLLAMA_BASE_URL,
         "ollama_model": OLLAMA_MODEL,
         "openai_key": OPENAI_API_KEY,
+        "openai_base_url": OPENAI_BASE_URL or "https://api.groq.com/openai/v1",
         "openai_model": OPENAI_MODEL,
         "temperature": 0.2,
     }
@@ -24,6 +35,7 @@ class AIProvider:
         ollama_url: Optional[str] = None,
         ollama_model: Optional[str] = None,
         openai_key: Optional[str] = None,
+        openai_base_url: Optional[str] = None,
         openai_model: Optional[str] = None,
         temperature: Optional[float] = None
     ):
@@ -35,6 +47,8 @@ class AIProvider:
             cls._runtime_config["ollama_model"] = ollama_model
         if openai_key is not None:
             cls._runtime_config["openai_key"] = openai_key
+        if openai_base_url is not None:
+            cls._runtime_config["openai_base_url"] = openai_base_url.rstrip("/")
         if openai_model is not None:
             cls._runtime_config["openai_model"] = openai_model
         if temperature is not None:
@@ -92,7 +106,8 @@ class AIProvider:
         api_key = cls._runtime_config["openai_key"]
         if not api_key:
             raise AIProviderError("OpenAI API key is not configured. Add it in Settings or .env.")
-        url = "https://api.openai.com/v1/chat/completions"
+        base_url = (cls._runtime_config.get("openai_base_url") or "https://api.groq.com/openai/v1").rstrip("/")
+        url = f"{base_url}/chat/completions"
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
