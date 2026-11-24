@@ -1,9 +1,9 @@
 from typing import List, Dict, Any
-from core.models import Paper
-from processing.chunker import DocumentChunker
-from rag.vector_store import LocalTFIDFVectorStore
-from ai.provider import AIProvider
-from config.prompts import CHAT_SYSTEM_PROMPT
+from models import Paper
+from chunker import DocumentChunker
+from vector_store import LocalTFIDFVectorStore
+from provider import AIProvider
+from prompts import CHAT_SYSTEM_PROMPT
 
 class RAGRetriever:
     @staticmethod
