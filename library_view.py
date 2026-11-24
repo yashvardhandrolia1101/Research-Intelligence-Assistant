@@ -1,8 +1,8 @@
 import streamlit as st
-from database.repository import Repository
-from exports.csv_exporter import CSVExporter
-from exports.markdown_exporter import MarkdownExporter
-from ui.components import render_header
+from repository import Repository
+from csv_exporter import CSVExporter
+from markdown_exporter import MarkdownExporter
+from components import render_header
 
 def render_library(navigate_callback):
     render_header(
